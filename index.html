@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+  background: linear-gradient(to right, #FF0000 0%, #FF4141 100%);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow-x: hidden;
+   }
+   
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background-color: #1503A5;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: floatUp 5s infinite ease-in;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: #333;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) translateX(20px);
+        opacity:0;
+      }
+    }
+    h1 {
+    font-size: 50px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px#000;
+    }
+    
+    .button {
+     background-color: red;
+     color: white;
+     padding: 15px 30px;
+     border: none;
+     border-radius: 50px;
+     font-size: 18px;
+     cursor: pointer;
+    }
+    
+    .button:hover {darkred;
+    }
+    
+    video {
+    margin-top: 50px;
+    width: 100%;
+    margin-550px;
+    display:none;
+    border-radius:30px;
+    box-shadow: 0 0 20px#000;
+    }
+    
+    {}
+      margin: 0;
+      overflow: hidden;
+      background: #fff;
+    }
+   </style>
+  </head>
+  <body>
+  
+  <style>
+ @keyframes flicker {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .animate-flicker {
+      animation: flicker 0.4s infinite;
+   }
+  </style>
+</head>
+<body class="text-center text-white">
+  <!-- Floating Balloons -->
+  <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>
+  <div class="balloon" style="left: 40%; animation-delay: 2s; background-color: <=#6c5ce7;"></div>
+  <div class="balloon" style="left: 60%; animation-delay: 4s; background-color: #00b894;"></div>
+  <div class="balloon" style="left: 80%; animation-delay: 1s; background-color: #ffeaa7;"></div>
+ 
+  <!-- Header Message -->  <section
+  <section class="min-h-screen flex flex-col justify-start items-center px-4 pt-20" data-aos="fade-down">
+  <!--Animated Cake -->
+  <div class="relative w-24 h-32">
+    <div class="absolute bottom-0 w-full h-5 rounded-lg bg-pink-500"></div>
+    <div class="absolute bottom-5 w-full h-5 rounded-lg bg-pink-300"></div>
+    <div class="absolute bottom-10 w-full h-5 rounded-lg bg-pink-100"></div>
+    <div class="absolute bottom-[60px] left-1/2 w-1 h-6 bg-white rounded-sm -translate-x-1/2"></div>
+    <div class="absolute bottom-[78px] left-1/2 w-3 h-3 bg-yellow-300 rounded-full -translate-x-1/2 animate-flicker"></div>
+  </div>
+
+  <!-- Heading -->
+  <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1>
+</div>
+<section 
+  class="min-h-screen flex flex-col justify-center items-center px-4" data-aos="fade-down">
+  
+  <h2 class ="text-4xl md:text-6xl font-bold mb-4 animate-bounce"!</h2>
+    <p
+    
+  <p
+    class="text-lg md:text-2xl mb-6">Wish you all the happiness      and love in the world,,....your King..⬇️"Scroll down"</p>
+    
+    </section> 
+    
+    <!-- Animated Wishes -->  <section class="py-20 px-6 space-y-12">
+    <div data-aos="fade-up" class="bg-pink-200 text-pink-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold
+      mb-2">May your day be filled
+      with sunshine and smile.</h3>
+    </div>
+    <div data-aos="fade-left" class="bg-yellow-100 text-yellow-900 p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold mb-2">Enjoy every second, every minute, every hour!</h3>
+    </div>
+    <div data-aos="fade-right" class="bg-purple-200 text-purple-900 p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold mb-2">Turning 18 is just the beginning.May this new chapter bring you closer to everything your heart quietly dreams of.  ⬇️Scroll down</h3> 
+    </div>
+  </section> 
+  
+  <!-- Footer with Animated Hearts -->  <footer class="py-10" data-aos="zoom-in">
+    <p class="text-lg"></p>
+  <div class="text-3xl mt-4
+ animate-pulse"></div>
+</footer> 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
+     A0S.init();
+ </script>
+  </body>
+  </html>
+   <style>
+  
+  .heart-button {
+    background-color:#1549E1;
+    color: #FFF7F7#hite;
+    font-size: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+    position: relative;
+    top: 100px;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+</style>
+<button class="heart-button" onclick="showVideo()">Click Here for a Surprise</button>⬇️"Scroll down"
+
+    <div class="video-container" id="videoContainer">
+  <video id="surpriseVideo" controls>
+    <source src="https://i.imgur.com/cpjCNYS.mp4" type="video/mp4">
+  </video>
+</div>
+    <script>
+  let playCount = 0;
+  function showVideo() {
+    const video = document.getElementById('surpriseVideo');
+    video.style.display = "block";
+    video.play();
+    
+    video.addEventListener("ended", () => {
+      playCount++;
+      if (playCount < 2) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  }
+</script>
+  </video>
+</div>
+
+    </script>
+<div style="height: 250px;"></div>
+ <script >
+  AOS.init();
+ </script>  
+ <audio id="popSound" src="https://media.vocaroo.com/mp3/16GIVV6hSFKm" preload="auto"></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  // Function to play confetti and sound
+  function startConfetti() {
+    const pop = document.getElementById('popSound');
+    pop.play();
+
+    const duration = 5000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 100,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 100,
+        origin: { x: 1 }
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }
+
+   // Run when the page loads
+   window.onload = startConfetti;
+</script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Game</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #ffeaf0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      font-size: 18px;
+    }
+    #playSection {
+      margin: 40px 0;
+    }
+    #playButton, #startGameButton, #restartButton {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #1549E1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #birthdayGameWrapper {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    #gameArea {
+      position: relative;
+      width: 90vw;
+      max-width: 400px;
+      height: 400px;
+      background-color: #F0F0F0;
+      border: 3px solid #000;
+      overflow: hidden;
+      touch-action: none;
+      margin-bottom: 10px;
+    }
+    #startGameButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1549E1;
+      z-index: 10;
+      animation: pulse 1.2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+      50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.85; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+    #bar {
+      position: absolute;
+      width: 100px;
+      height: 20px;
+      background-color: #1549E1;
+      bottom: 10px;
+      left: 150px;
+    }
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      font-size: 28px;
+      color: darkred;
+    }
+    #countdown {
+      font-size: 20px;
+      margin: 10px;
+    }
+    #catchCount {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+      color: #000;
+      background: #fff0f5;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid #000;
+    }
+    #message {
+      font-size: 20px;
+      margin: 10px;
+      color: #000;
+    }
+    #restartButton {
+      display: none;
+      position: absolute;
+      top: 93%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1549e1;
+      z-index: 10;
+    }
+    #winOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 5;
+    }
+    #winOverlay img {
+      width: 100%;
+      height: auto;
+    }
+    .nameOverlay {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 36px;
+      color: #FFFFFF;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      animation: glow 2s ease-in-out infinite alternate;
+      white-space: nowrap;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 20px #ff6ec7;
+        opacity: 0.8;
+      }
+      to {
+        text-shadow: 0 0 10px #ffccff, 0 0 20px #ff6ec7, 0 0 30px #ff99cc;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+   ⬇️ Tap below to play a fun heart-catching game. Catch 10 hearts to win and see a surprise!
+  </header>
+
+  <div id="playSection">
+    <button id="playButton">Play Here</button>
+  </div>
+
+  <div id="birthdayGameWrapper">
+    <div id="gameArea">
+      <button id="startGameButton">Start Game</button>
+      <div id="bar"></div>
+      <div id="catchCount">Caught: 0</div>
+      <div id="winOverlay">
+        <img src="https://imgur.com/oTVelgU.jpg" alt="Celebration Image" />
+        <div class="nameOverlay">Sania Aayat</div>
+      </div>
+      <button id="restartButton">Restart Game</button>
+    </div>
+    <div id="countdown">Time Left: 20s</div>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const playButton = document.getElementById("playButton");
+    const birthdayGameWrapper = document.getElementById("birthdayGameWrapper");
+    const gameArea = document.getElementById("gameArea");
+    const startGameButton = document.getElementById("startGameButton");
+    const bar = document.getElementById("bar");
+    const countdown = document.getElementById("countdown");
+    const message = document.getElementById("message");
+    const catchCount = document.getElementById("catchCount");
+    const restartButton = document.getElementById("restartButton");
+    const winOverlay = document.getElementById("winOverlay");
+    const backgroundVideo = document.getElementById("backgroundVideo"); // reference to existing video
+    
+     const catchSound = new Audio("https://media1.vocaroo.com/mp3/1f14jioLA0M3");
+    const customWinSong = new Audio("https://media.vocaroo.com/mp3/154hlYEuzs8U");
+    
+    customWinSong.loop = true;
+  
+    let audioAllowed = false;
+
+    let hearts = [];
+    let caught = 0;
+    let heartInterval, moveInterval, countdownInterval;
+    let timeLeft = 20;
+    let dragging = false, startX = 0, barStartLeft = 0;
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * (gameArea.clientWidth - 30) + "px";
+      heart.style.top = "0px";
+      gameArea.appendChild(heart);
+      hearts.push(heart);
+    }
+
+function moveHearts() {
+      hearts.forEach((heart, i) => {
+        const top = parseInt(heart.style.top);
+        heart.style.top = top + 10 + "px";
+
+        const barRect = bar.getBoundingClientRect();
+        const heartRect = heart.getBoundingClientRect();
+        const areaRect = gameArea.getBoundingClientRect();
+
+        if (
+          heartRect.bottom >= barRect.top &&
+          heartRect.left < barRect.right &&
+          heartRect.right > barRect.left &&
+          heartRect.bottom <= areaRect.bottom
+        ) {
+          heart.remove();
+          hearts.splice(i, 1);
+          caught++;
+          catchSound.play();
+          catchCount.innerText = `Caught: ${caught}`;
+          if (caught === 10) {
+            message.innerText = "⬇️ DO YOU KNOW WHO MAKE THIS WEBSITE FOR YOU???BYE!!!😊";
+            stopGame(true);
+          }
+        } else if (top > gameArea.clientHeight) {
+          heart.remove();
+          hearts.splice(i, 1);
+        }
+      });
+    }
+    
+    function updateCountdown() {
+      timeLeft--;
+      countdown.innerText = `Time Left: ${timeLeft}s`;
+      if (timeLeft <= 0) {
+        stopGame(false);
+        if (caught < 10) message.innerText = "Time's up! Try again!";
+      }
+    }
+
+    function showGameArea() {
+      playButton.style.display = "none";
+      birthdayGameWrapper.style.display = "flex";
+      birthdayGameWrapper.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function startGame() {
+      if (!audioAllowed) {
+        customWinSong.load(); // unlock autoplay
+        audioAllowed = true;
+      }
+
+      startGameButton.style.display = "none";
+      restartButton.style.display = "none";
+      winOverlay.style.display = "none";
+      timeLeft = 20;
+      caught = 0;
+      message.innerText = "";
+      countdown.innerText = "Time Left: 20s";
+      catchCount.innerText = "Caught: 0";
+      hearts.forEach(h => h.remove());
+      hearts = [];
+
+      customWinSong.pause();
+      customWinSong.currentTime = 0;
+
+      heartInterval = setInterval(createHeart, 800);
+      moveInterval = setInterval(moveHearts, 30);
+      countdownInterval = setInterval(updateCountdown, 1000);
+    }
+
+    function stopGame(won) {
+      clearInterval(heartInterval);
+      clearInterval(moveInterval);
+      clearInterval(countdownInterval);
+
+      if (won) {
+        const video = document.getElementById("backgroundVideo");
+        if (video) {
+          video.pause();
+          video.muted = true;
+          video.style.display = "none";
+        }
+
+        winOverlay.style.display = "flex";
+        customWinSong.currentTime = 0;
+        customWinSong.play();
+      }
+
+      restartButton.style.display = "inline-block";
+    }
+
+    bar.addEventListener("touchstart", (e) => {
+      dragging = true;
+      startX = e.touches[0].clientX;
+      barStartLeft = bar.offsetLeft;
+    });
+
+    bar.addEventListener("touchmove", (e) => {
+      if (!dragging) return;
+      const deltaX = e.touches[0].clientX - startX;
+      let newLeft = barStartLeft + deltaX;
+      newLeft = Math.max(0, Math.min(newLeft, gameArea.clientWidth - bar.offsetWidth));
+      bar.style.left = newLeft + "px";
+    });
+
+    bar.addEventListener("touchend", () => {
+      dragging = false;
+    });
+
+    playButton.addEventListener("click", showGameArea);
+    startGameButton.addEventListener("click", startGame);
+    restartButton.addEventListener("click", startGame);
+  </script>
+</body>
+</html>
+    
+     ❤️️😊😊😊😊😊😊😊❤️
+  
+      
+
+
+
+
+
+
+
+
+
