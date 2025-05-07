@@ -126,7 +126,7 @@
     <p
     
   <p
-    class="text-lg md:text-2xl mb-6">Wish you all the happiness      and love in the world,,....your King..⬇️"Scroll Down"</p>
+    class="text-lg md:text-2xl mb-6">Wish you all the happiness      and love in the world,,....your King😅...⬇️"Scroll Down"</p>
     
     </section> 
     
@@ -393,6 +393,138 @@
   </style>
 </head>
 <body>
+  
+<!-- Extra height for scroll -->
+<div style="height: -50px;"></div>
+
+<!-- Gift Section at Bottom -->
+<div class="gift-container">
+  <!-- Video Hidden Initially -->
+  <div class="video-popup" id="videoPopup">
+    <iframe id="videoFrame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <span class="close-btn" id="closeBtn">&times;</span>
+  </div>
+
+  <!-- Gift Box -->
+  <div class="gift-section" id="giftTrigger">
+    <img src="https://i.postimg.cc/4Nzk263h/Screenshot-20250507-104012-Chrome-removebg-preview.png" alt="Gift Box" class="gift-img" />
+    <p class="gift-message">CLICK ON THE GIFT</p>
+  </div>
+</div>
+
+<style>
+  .gift-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 300px;
+    margin-top: 100px;
+  }
+
+  .gift-section {
+    text-align: center;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+  }
+
+  .gift-img {
+    width: 170px;
+    height: auto;
+  }
+
+  .gift-message {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  .video-popup {
+    display: none;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .video-popup iframe {
+    width: 500px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: none;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 18px;
+    color: red;
+    background: #000000;
+    border-radius: 50%;
+    padding: 0 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  const giftTrigger = document.getElementById("giftTrigger");
+  const videoPopup = document.getElementById("videoPopup");
+  const videoFrame = document.getElementById("videoFrame");
+  const closeBtn = document.getElementById("closeBtn");
+
+  const streamableLink = "https://streamable.com/e/4v6w8i?nocontrols=1";
+  let videoPlayed = false;
+
+  function pauseAllMediaExcept(target) {
+    const allMedia = document.querySelectorAll('audio, video, iframe');
+    allMedia.forEach(el => {
+      if (el !== target) {
+        if (el.tagName === 'AUDIO' || el.tagName === 'VIDEO') {
+          el.pause?.();
+        } else if (el.tagName === 'IFRAME') {
+          el.src = el.src;
+        }
+      }
+    });
+  }
+
+  giftTrigger.addEventListener("click", () => {
+    if (videoPlayed) return;
+
+    pauseAllMediaExcept(videoFrame);
+    videoFrame.src = streamableLink;
+    videoPopup.style.display = "block";
+    videoPlayed = true;
+
+    setTimeout(() => {
+      videoPopup.style.display = "none";
+      videoFrame.src = "";
+      videoPlayed = false;
+    }, 15000);
+  });
+
+  closeBtn.addEventListener("click", () => {
+    videoPopup.style.display = "none";
+    videoFrame.src = "";
+    videoPlayed = false;
+  });
+</script>
 
   <header>
    ⬇️ Tap below to play a fun heart-catching game. Catch 10 hearts to win and see a surprise!
@@ -474,7 +606,7 @@ function moveHearts() {
           catchSound.play();
           catchCount.innerText = `Caught: ${caught}`;
           if (caught === 10) {
-            message.innerText = "⬇️ GUESS WHO MAKE THIS WEBSITE FOR YOU???BYE!!!😊";
+            message.innerText = "BYE!!!😊";
             stopGame(true);
           }
         } else if (top > gameArea.clientHeight) {
@@ -501,7 +633,7 @@ function moveHearts() {
 
     function startGame() {
       if (!audioAllowed) {
-        customWinSong.load(); // unlock autoplay
+        customWinSong.load();
         audioAllowed = true;
       }
 
@@ -567,18 +699,7 @@ function moveHearts() {
     startGameButton.addEventListener("click", startGame);
     restartButton.addEventListener("click", startGame);
   </script>
-</body>
-</html>
-    
-     ❤️️😊😊😊😊😊😊😊❤️
-  
-      
+  </body>
 
 
-
-
-
-
-
-
-
+     ❤️️😊😊😊😊
