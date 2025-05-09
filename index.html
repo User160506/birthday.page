@@ -1,242 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <meta property="og:title" content="Happy Birthday Sania!">
-  <meta property="og:description" content="Click here to see your birthday gift.">
-  <meta property="og:image" content="https://i.imgur.com/OwaRzGs.jpg">
-  <meta property="og:url" content="https://user160506.github.io/birthday.page.html">
-  <meta property="og:type" content="website">
-  <title>Happy Birthday!</title>
-</head>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-  background: linear-gradient(to right, #FF0000 0%, #71D1D3 110%);
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  overflow-x: hidden;
-   }
-   
-    .balloon {
-      position: absolute;
-      bottom: -100px;
-      width: 40px;
-      height: 60px;
-      background-color: #1503A5;
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      animation: floatUp 5s infinite ease-in;
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <meta property="og:title" content="Happy Birthday Sania!">  
+  <meta property="og:description" content="Click here to see your birthday gift.">  
+  <meta property="og:image" content="https://i.imgur.com/OwaRzGs.jpg">  
+  <meta property="og:url" content="https://user160506.github.io/birthday.page.html">  
+  <meta property="og:type" content="website">  
+  <title>Happy Birthday!</title>  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+  <style>  
+    body {  
+      background: linear-gradient(to right, #FF0000 0%, #71D1D3 110%);  
+      font-family: 'Comic Sans MS', cursive, sans-serif;  
+      overflow-x: hidden;  
+    }  
+
+    .balloon {  
+      position: absolute;  
+      bottom: -10px;  
+      width: 40px;  
+      height: 60px;  
+      background-color: #1503A5;  
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;  
+      animation: floatUp 5s infinite ease-in;  
+    }  
+
+    .balloon::after {  
+      content: '';  
+      position: absolute;  
+      bottom: -20px;  
+      left: 50%;  
+      transform: translateX(-50%);  
+      width: 2px;  
+      height: 20px;  
+      background: #333;  
+    }  
+
+    @keyframes floatUp {  
+      0% { transform: translateY(0) translateX(0); opacity: 1; }  
+      100% { transform: translateY(-120vh) translateX(20px); opacity:0; }  
+    }  
+    
+
+    h1 {  
+      font-size: 50px;  
+      margin-bottom: 20px;  
+      text-shadow: 2px 2px#000;  
+    }  
+
+    .button {  
+      background-color: red;  
+      color: white;  
+      padding: 15px 30px;  
+      border: none;  
+      border-radius: 50px;  
+      font-size: 18px;  
+      cursor: pointer;  
+    }  
+
+    .button:hover {  
+      background-color: darkred;  
+    }  
+
+    video {  
+      margin-top: 50px;  
+      width: 100%;  
+      display:none;  
+      border-radius:30px;  
+      box-shadow: 0 0 20px#000;  
+    }  
+
+    .heart-button {
+      background-color:#1549E1;
+      color: white;
+      font-size: 20px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      animation: bounce 1s infinite;
+      position: relative;
+      top: 100px;
     }
-    .balloon::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 20px;
-      background: #333;
-    }
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) translateX(0);
-        opacity: 1;
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
       }
-      100% {
-        transform: translateY(-120vh) translateX(20px);
-        opacity:0;
+      50% {
+        transform: translateY(-15px);
       }
     }
-    h1 {
-    font-size: 50px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px#000;
-    }
-    
-    .button {
-     background-color: red;
-     color: white;
-     padding: 15px 30px;
-     border: none;
-     border-radius: 50px;
-     font-size: 18px;
-     cursor: pointer;
-    }
-    
-    .button:hover {darkred;
-    }
-    
-    video {
-    margin-top: 50px;
+
+   #coverPage {
+    background: url("https://i.imgur.com/8xapFmr.jpeg") no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-550px;
-    display:none;
-    border-radius:30px;
-    box-shadow: 0 0 20px#000;
-    }
-    
-    {}
-      margin: 0;
-      overflow: hidden;
-      background: #fff;
-    }
-   </style>
-  </head>
-  <body>
-
-  </style>
-</head>
-<body class="text-center text-white">
-  
-<div class="w-full flex justify-center absolute top-0 z-10">
-  <img src="https://i.postimg.cc/2SGM5X9z/carnival-garland-flags-decorative-colorful-600nw-1059004949-removebg-preview.png" alt="Top Decorations" class="w-full max-w-3x1">
-</div>
-
-  <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>
-  <div class="balloon" style="left: 40%; animation-delay: 2s; background-color: <=#6c5ce7;"></div>
-  <div class="balloon" style="left: 60%; animation-delay: 4s; background-color: #00b894;"></div>
-  <div class="balloon" style="left: 80%; animation-delay: 1s; background-color: #ffeaa7;"></div>
- 
-    <section
-  <section class="min-h-screen flex flex-col justify-start items-center px-4 pt-20" data-aos="fade-down">
-    
-<div class="w-full flex justify-center pt-4">
-  <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">
-</div>
-
-  <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1>
-</div>
-<section 
-  class="min-h-screen flex flex-col justify-center items-center px-4" data-aos="fade-down">
-  
-  <h2 class ="text-4xl md:text-6xl font-bold mb-4 animate-bounce"!</h2>
-    <p
-    
-  <p
-    class="text-lg md:text-2xl mb-6">Wish you all the happiness      and love in the world,,....your King😅...⬇️"Scroll Down"</p>
-    
-    </section> 
-    
-     <section class="py-6 px-6 space-y-10">
-    <div data-aos="fade-up" class="bg-pink-200 text-pink-800 p-6 rounded-lg shadow-md">
-      <h3 class="text-2xl font-bold
-      mb-2">May your day be filled
-      with sunshine and smile.</h3>
-    </div>
-    <div data-aos="fade-left" class="bg-yellow-100 text-yellow-900 p-6 rounded-lg shadow-md">
-      <h3 class="text-2xl font-bold mb-2">Enjoy every second, every minute, every hour!</h3>
-    </div>
-    <div data-aos="fade-right" class="bg-purple-200 text-purple-900 p-6 rounded-lg shadow-md">
-      <h3 class="text-2xl font-bold mb-2">May This New Chapter Bring You Closer To Everything Your Heart Quietly Dreams.  ⬇️Scroll Down</h3> 
-    </div>
-  </section> 
-
-   <footer class="py-10" data-aos="zoom-in">
-    <p class="text-lg"></p>
-  <div class="text-3xl mt-4
- animate-pulse"></div>
-</footer> 
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
-     A0S.init();
- </script>
-  </body>
-  </html>
-   <style>
-  
-  .heart-button {
-    background-color:#1549E1;
-    color: #FFF7F7#hite;
-    font-size: 20px;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    animation: bounce 1s infinite;
-    position: relative;
-    top: 100px;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.5s ease, opacity 1.5s ease;
   }
 
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
+  #coverPage.opened {
+    transform: rotateY(180deg);
+    opacity: 0;
+    pointer-events: none;
   }
 </style>
-<button class="heart-button" onclick="showVideo()">Click Here for a Surprise</button>
+</head>  
+<body class="text-center text-white">  
 
-    <div class="video-container" id="videoContainer">
-  <video id="surpriseVideo" controls>
-    <source src="https://i.imgur.com/cpjCNYS.mp4" type="video/mp4">
-  </video>
-</div>
-  <script>
-  let playCount = 0;
-  function showVideo() {
-    const video = document.getElementById('surpriseVideo');
-    video.style.display = "block";
-    video.play();
-    
-    video.addEventListener("ended", () => {
-      playCount++;
-      if (playCount < 2) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-  }
-</script>
-  </video>
-</div>
-    
-    </script>
-<div style="height: 170px;"></div>
- <script >
-  AOS.init();
- </script>  
- <audio id="popSound" src="https://media.vocaroo.com/mp3/16GIVV6hSFKm" preload="auto"></audio>
+  <div id="coverPage" class="fixed top-0 left-0 w-full h-full bg-black flex flex-col justify-center items-center z-50 transition-transform duration-[1.5s]">
+    <img src="https://i.postimg.cc/ZYrhzMY4/Screenshot-20250508-222108-Facebook.jpg" alt="Sania" class="w-22 h-22 rounded-full shadow-lg mb-6 border-2 border-white">
+    <button onclick="openPage()" class="text-white bg-red-600 hover:bg-red-800 px-8 py-4 text-xl rounded-full transition duration-300 shadow-lg">Open</button>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script>
+  <div class="w-full flex justify-center absolute top-0 z-10">  
+    <img src="https://i.postimg.cc/2SGM5X9z/carnival-garland-flags-decorative-colorful-600nw-1059004949-removebg-preview.png" alt="Top Decorations" class="w-full max-w-3x1">  
+  </div>    
+
+  <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>  
+  <div class="balloon" style="left: 40%; animation-delay: 2s; background-color: <=#6c5ce7;"></div>  
+  <div class="balloon" style="left: 60%; animation-delay: 4s; background-color: #00b894;"></div>  
+  <div class="balloon" style="left: 80%; animation-delay: 1s; background-color: #ffeaa7;"></div>  
+    
+  <section class="min-h-screen flex flex-col justify-start items-center px-4 pt-20" data-aos="fade-down">  
+    <div class="w-full flex justify-center pt-4">  
+      <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">  
+    </div>    
+    <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1> 
+        <p class="text-lg md:text-2xl mb-6">Wish you all the happiness and love in the world,,....your King😅...⬇️"Scroll Down"</p> 
+     
+  </section>  
   
-  function startConfetti() {
-    const pop = document.getElementById('popSound');
-    pop.play();
+  <section class="min-h-screen flex flex-col justify-center items-center px-4" data-aos="fade-down">    
+    <h1 class ="text-4xl md:text-6xl font-bold mb-4 animate-bounce"></h2>  
+        <p class="text-lg md:text-2xl mb-6">"⬇️"Scroll Down"</p> 
+        
+  </section>   
 
-    const duration = 5000;
-    const end = Date.now() + duration;
+  <section class="py-6 px-6 space-y-10">  
+    <div data-aos="fade-up" class="bg-pink-200 text-pink-800 p-6 rounded-lg shadow-md">  
+      <h3 class="text-2xl font-bold mb-2">May your day be filled with sunshine and smile.</h3>  
+    </div>  
+    <div data-aos="fade-left" class="bg-yellow-100 text-yellow-900 p-6 rounded-lg shadow-md">  
+      <h3 class="text-2xl font-bold mb-2">Enjoy every second, every minute, every hour!</h3>  
+    </div>  
+    <div data-aos="fade-right" class="bg-purple-200 text-purple-900 p-6 rounded-lg shadow-md">  
+      <h3 class="text-2xl font-bold mb-2">May This New Chapter Bring You Closer To Everything Your Heart Quietly Dreams.  ⬇️Scroll Down</h3>   
+    </div>
+  </section>      
 
-    (function frame() {
-      confetti({
-        particleCount: 4,
-        angle: 60,
-        spread: 100,
-        origin: { x: 0 }
+  <footer class="py-10" data-aos="zoom-in">  
+    <p class="text-lg"></p>  
+    <div class="text-3xl mt-4 animate-pulse"></div>  
+  </footer>   
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script>
+    AOS.init();
+  </script>  
+
+  <button class="heart-button" onclick="showVideo()">Click Here for a Surprise</button>
+
+  <div class="video-container" id="videoContainer">
+    <video id="surpriseVideo" controls>  
+      <source src="https://i.imgur.com/cpjCNYS.mp4" type="video/mp4">  
+    </video>  
+  </div>  
+
+  <script>  
+    let playCount = 0;  
+    function showVideo() {  
+      const video = document.getElementById('surpriseVideo');  
+      video.style.display = "block";  
+      video.play();  
+      video.addEventListener("ended", () => {  
+        playCount++;  
+        if (playCount < 2) {  
+          video.play();  
+        } else {  
+          video.pause();  
+        }  
       });
-      confetti({
-        particleCount: 5,
-        angle: 120,
-        spread: 100,
-        origin: { x: 1 }
-      });
+    }
 
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    })();
-  }
+    function openPage() {
+      const cover = document.getElementById('coverPage');
+      cover.classList.add('opened');
+    }
+  </script>
+  <div style="height: 150px;"></div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>  
+  <audio id="popSound" src="https://media.vocaroo.com/mp3/16GIVV6hSFKm" preload="auto"></audio>  
 
-   
-   window.onload = startConfetti;
-</script>
-</body>
+  <script>  
+    function startConfetti() {  
+      const pop = document.getElementById('popSound');  
+      pop.play();  
+
+      const duration = 5000;  
+      const end = Date.now() + duration;  
+
+      (function frame() {  
+        confetti({  
+          particleCount: 4,  
+          angle: 60,  
+          spread: 100,  
+          origin: { x: 0 }  
+        });  
+        confetti({  
+          particleCount: 5,  
+          angle: 120,  
+          spread: 100,  
+          origin: { x: 1 }  
+        });  
+
+        if (Date.now() < end) {  
+          requestAnimationFrame(frame);  
+        }  
+      })();  
+    }  
+
+    window.onload = startConfetti;  
+  </script>  
+</body>  
+</html>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -279,8 +278,8 @@
     #gameArea {
       position: relative;
       width: 90vw;
-      max-width: 400px;
-      height: 400px;
+      max-width: 395px;
+      height: 395px;
       background-color: #F0F0F0;
       border: 3px solid #000;
       overflow: hidden;
