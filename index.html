@@ -6,7 +6,7 @@
   <meta property="og:title" content="Happy Birthday Sania!">  
   <meta property="og:description" content="Click here to see your birthday gift.">  
   <meta property="og:image" content="https://i.imgur.com/OwaRzGs.jpg">  
-  <meta property="og:url" content="https://user160506.github.io/birthday.page.html">  
+  <meta property="og:url" content="https://user160506.github.io/birthday31.page.html">  
   <meta property="og:type" content="website">  
   <title>Happy Birthday!</title>  
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
@@ -134,18 +134,19 @@
   <div class="balloon" style="left: 60%; animation-delay: 4s; background-color: #00b894;"></div>  
   <div class="balloon" style="left: 80%; animation-delay: 1s; background-color: #ffeaa7;"></div>  
     
-  <section class="min-h-screen flex flex-col justify-start items-center px-4 pt-20" data-aos="fade-down">  
-    <div class="w-full flex justify-center pt-4">  
-      <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">  
-    </div>    
-    <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1> 
-        <p class="text-lg md:text-2xl mb-6">Wish you all the happiness and love in the world,,....your King😅...⬇️"Scroll Down"</p> 
+<section class="min-h-screen flex flex-col justify-start items-center px-4 pt-40" data-aos="fade-down">
+  <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1>
+  <div class="w-full flex justify-center pt-4">
+    <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">
+  </div>
+  <p class="text-lg md:text-2xl mb-6">Wish you all the happiness and love in the world!!!⬇️Scroll Down</p>
+</section>
      
   </section>  
   
   <section class="min-h-screen flex flex-col justify-center items-center px-4" data-aos="fade-down">    
     <h1 class ="text-4xl md:text-6xl font-bold mb-4 animate-bounce"></h2>  
-        <p class="text-lg md:text-2xl mb-6">"⬇️"Scroll Down"</p> 
+        <p class="text-lg md:text-2xl mb-6">⬇️Scroll Down</p> 
         
   </section>   
 
@@ -232,7 +233,14 @@
       })();  
     }  
 
-    window.onload = startConfetti;  
+    function openPage() {
+  const cover = document.getElementById('coverPage');
+  cover.classList.add('opened');
+  
+  setTimeout(() => {
+    startConfetti();
+  }, 1500); 
+} 
   </script>  
 </body>  
 </html>  
@@ -516,7 +524,7 @@
 </script>
 
   <header>
-   ⬇️ Tap below to play a fun heart-catching game. Catch 10 hearts to win and see a surprise!
+   ⬇️ Tap below to play a fun heart-catching game. Catch 13 hearts to win and see a surprise!
   </header>
 
   <div id="playSection">
@@ -533,10 +541,35 @@
         <div class="nameOverlay">Sania Aayat</div>
       </div>
       <button id="restartButton">Restart Game</button>
+      <div id="instructionNote">Move The Bar To Play</div>
+    
     </div>
     <div id="countdown">Time Left: 20s</div>
     <div id="message"></div>
   </div>
+
+<style>
+  #instructionNote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+    color: #858080;
+  }
+
+  #instructionNote.fade-out {
+    opacity: 0;
+  }
+</style>
 
   <script>
     const playButton = document.getElementById("playButton");
@@ -550,19 +583,19 @@
     const restartButton = document.getElementById("restartButton");
     const winOverlay = document.getElementById("winOverlay");
     const backgroundVideo = document.getElementById("backgroundVideo");
-    
-     const catchSound = new Audio("https://media1.vocaroo.com/mp3/1f14jioLA0M3");
-    const customWinSong = new Audio("https://media.vocaroo.com/mp3/154hlYEuzs8U");
-    
-    customWinSong.loop = true;
-  
-    let audioAllowed = false;
+    const instructionNote = document.getElementById("instructionNote");
 
+    const catchSound = new Audio("https://media1.vocaroo.com/mp3/1f14jioLA0M3");
+    const customWinSong = new Audio("https://media.vocaroo.com/mp3/154hlYEuzs8U");
+    customWinSong.loop = true;
+
+    let audioAllowed = false;
     let hearts = [];
     let caught = 0;
     let heartInterval, moveInterval, countdownInterval;
     let timeLeft = 20;
     let dragging = false, startX = 0, barStartLeft = 0;
+    let instructionShown = true;
 
     function createHeart() {
       const heart = document.createElement("div");
@@ -574,7 +607,7 @@
       hearts.push(heart);
     }
 
-function moveHearts() {
+    function moveHearts() {
       hearts.forEach((heart, i) => {
         const top = parseInt(heart.style.top);
         heart.style.top = top + 10 + "px";
@@ -594,8 +627,8 @@ function moveHearts() {
           caught++;
           catchSound.play();
           catchCount.innerText = `Caught: ${caught}`;
-          if (caught === 10) {
-            message.innerText = "BYE!!!😊";
+          if (caught === 13) {
+            message.innerText = "Your king😅,,,BYE!!!😊";
             stopGame(true);
           }
         } else if (top > gameArea.clientHeight) {
@@ -604,13 +637,13 @@ function moveHearts() {
         }
       });
     }
-    
+
     function updateCountdown() {
       timeLeft--;
       countdown.innerText = `Time Left: ${timeLeft}s`;
       if (timeLeft <= 0) {
         stopGame(false);
-        if (caught < 10) message.innerText = "Time's up! Try again!";
+        if (caught < 13) message.innerText = "Time's up! Try again!";
       }
     }
 
@@ -629,10 +662,10 @@ function moveHearts() {
       startGameButton.style.display = "none";
       restartButton.style.display = "none";
       winOverlay.style.display = "none";
-      timeLeft = 20;
+      timeLeft = 18;
       caught = 0;
       message.innerText = "";
-      countdown.innerText = "Time Left: 20s";
+      countdown.innerText = "Time Left 18s";
       catchCount.innerText = "Caught: 0";
       hearts.forEach(h => h.remove());
       hearts = [];
@@ -643,6 +676,9 @@ function moveHearts() {
       heartInterval = setInterval(createHeart, 800);
       moveInterval = setInterval(moveHearts, 30);
       countdownInterval = setInterval(updateCountdown, 1000);
+
+      instructionNote.style.display = "block"; 
+      instructionShown = true;
     }
 
     function stopGame(won) {
@@ -674,6 +710,12 @@ function moveHearts() {
 
     bar.addEventListener("touchmove", (e) => {
       if (!dragging) return;
+
+      if (instructionShown) {
+        instructionNote.style.display = "none";
+        instructionShown = false;
+      }
+
       const deltaX = e.touches[0].clientX - startX;
       let newLeft = barStartLeft + deltaX;
       newLeft = Math.max(0, Math.min(newLeft, gameArea.clientWidth - bar.offsetWidth));
@@ -688,7 +730,7 @@ function moveHearts() {
     startGameButton.addEventListener("click", startGame);
     restartButton.addEventListener("click", startGame);
   </script>
-  </body>
+</body>
 
 
      ❤️😊😊😊😊😊❤️
