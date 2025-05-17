@@ -16,7 +16,12 @@
       background: linear-gradient(to right, #FF0000 0%, #71D1D3 110%);  
       font-family: 'Comic Sans MS', cursive, sans-serif;  
       overflow-x: hidden;  
-    }  
+    }
+
+    .noscroll {
+      overflow: hidden;
+      height: 100vh;
+    }
 
     .balloon {  
       position: absolute;  
@@ -43,7 +48,6 @@
       0% { transform: translateY(0) translateX(0); opacity: 1; }  
       100% { transform: translateY(-120vh) translateX(20px); opacity:0; }  
     }  
-    
 
     h1 {  
       font-size: 50px;  
@@ -95,32 +99,32 @@
       }
     }
 
-   #coverPage {
-    background: url("https://i.imgur.com/8xapFmr.jpeg") no-repeat center center;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 1.5s ease, opacity 1.5s ease;
-  }
+    #coverPage {
+      background: url("https://i.imgur.com/8xapFmr.jpeg") no-repeat center center;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 1.5s ease, opacity 1.5s ease;
+    }
 
-  #coverPage.opened {
-    transform: rotateY(180deg);
-    opacity: 0;
-    pointer-events: none;
-  }
-</style>
+    #coverPage.opened {
+      transform: rotateY(180deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>  
-<body class="text-center text-white">  
+<body class="text-center text-white noscroll">  
 
-  <div id="coverPage" class="fixed top-0 left-0 w-full h-full bg-black flex flex-col justify-center items-center z-50 transition-transform duration-[1.5s]">
+  <div id="coverPage">
     <img src="https://i.postimg.cc/ZYrhzMY4/Screenshot-20250508-222108-Facebook.jpg" alt="Sania" class="w-22 h-22 rounded-full shadow-lg mb-6 border-2 border-white">
     <button onclick="openPage()" class="text-white bg-red-600 hover:bg-red-800 px-8 py-4 text-xl rounded-full transition duration-300 shadow-lg">Open</button>
   </div>
@@ -130,24 +134,21 @@
   </div>    
 
   <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>  
-  <div class="balloon" style="left: 40%; animation-delay: 2s; background-color: <=#6c5ce7;"></div>  
+  <div class="balloon" style="left: 40%; animation-delay: 2s; background-color: #6c5ce7;"></div>  
   <div class="balloon" style="left: 60%; animation-delay: 4s; background-color: #00b894;"></div>  
   <div class="balloon" style="left: 80%; animation-delay: 1s; background-color: #ffeaa7;"></div>  
-    
-<section class="min-h-screen flex flex-col justify-start items-center px-4 pt-40" data-aos="fade-down">
-  <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1>
-  <div class="w-full flex justify-center pt-4">
-    <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">
-  </div>
-  <p class="text-lg md:text-2xl mb-6">Wish you all the happiness and love in the world!!!⬇️Scroll Down</p>
-</section>
-     
-  </section>  
-  
+
+  <section class="min-h-screen flex flex-col justify-start items-center px-4 pt-40" data-aos="fade-down">
+    <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1>
+    <div class="w-full flex justify-center pt-4">
+      <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">
+    </div>
+    <p class="text-lg md:text-2xl mb-6">Wish you all the happiness and love in the world!!!⬇️Scroll Down</p>
+  </section>
+
   <section class="min-h-screen flex flex-col justify-center items-center px-4" data-aos="fade-down">    
-    <h1 class ="text-4xl md:text-6xl font-bold mb-4 animate-bounce"></h2>  
-        <p class="text-lg md:text-2xl mb-6">⬇️Scroll Down</p> 
-        
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-bounce"></h1>  
+    <p class="text-lg md:text-2xl mb-6">⬇️Scroll Down</p> 
   </section>   
 
   <section class="py-6 px-6 space-y-10">  
@@ -199,9 +200,16 @@
     function openPage() {
       const cover = document.getElementById('coverPage');
       cover.classList.add('opened');
+      document.body.classList.remove('noscroll'); // Enable scrolling again
+
+      setTimeout(() => {
+        startConfetti();
+      }, 1500);
     }
   </script>
+
   <div style="height: 150px;"></div>
+
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>  
   <audio id="popSound" src="https://media.vocaroo.com/mp3/16GIVV6hSFKm" preload="auto"></audio>  
 
@@ -232,18 +240,9 @@
         }  
       })();  
     }  
-
-    function openPage() {
-  const cover = document.getElementById('coverPage');
-  cover.classList.add('opened');
-  
-  setTimeout(() => {
-    startConfetti();
-  }, 1500); 
-} 
   </script>  
 </body>  
-</html>  
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -628,7 +627,7 @@
           catchSound.play();
           catchCount.innerText = `Caught: ${caught}`;
           if (caught === 13) {
-            message.innerText = "Your king😅,,,BYE!!!😊";
+            message.innerText = "YOUR KING😅,,,BYE!!!😊";
             stopGame(true);
           }
         } else if (top > gameArea.clientHeight) {
