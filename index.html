@@ -9,10 +9,14 @@
   <meta property="og:image" content="">  
   <meta property="og:url" content="https://user160506.github.io/birthday.page.html">  
   <meta property="og:type" content="website">  
-  <title>Happy Birthday!</title>  
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
   <style>
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -144,8 +148,21 @@
         font-size: 18px;
       }
     }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-6px); }
+      80% { transform: translateX(6px); }
+      100% { transform: translateX(0); }
+    }
+
+    .shake {
+      animation: shake 0.4s ease;
+    }
   </style>
-</head>  
+</head>
 <body>
   <div class="lock-screen" id="lockScreen">
     <div class="lock-icon" id="lockIcon">🔒</div>
@@ -172,7 +189,7 @@
     const display = document.getElementById("pinDisplay");
     const lockIcon = document.getElementById("lockIcon");
     const lockScreen = document.getElementById("lockScreen");
-    let pinVisual = ["", "", "", "" ,"", ""];
+    let pinVisual = ["", "", "", "" , "", ""];
     let revealTimeouts = [];
 
     function appendDigit(digit) {
@@ -187,6 +204,10 @@
           pinVisual[index] = "•";
           updateDisplay();
         }, 1000);
+
+        if (enteredPin.length === 6 && enteredPin === correctPin) {
+          setTimeout(checkPin, 200);
+        }
       }
     }
 
@@ -209,14 +230,18 @@
           window.location.href = "birthday.html";
         }, 1000);
       } else {
+      
+        if (navigator.vibrate) {
+          navigator.vibrate(200);
+        }
         display.innerText = "Try Again";
+        lockScreen.classList.add("shake");
         setTimeout(() => {
+          lockScreen.classList.remove("shake");
           clearPin();
-        }, 1200);
+        }, 600);
       }
-    } document.addEventListener("DOMContentLoaded", function() {
-    document.body.style.overflow = 'hidden';
-  });
+    }
   </script>
 </body>
 </html>
