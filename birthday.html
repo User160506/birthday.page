@@ -1,0 +1,735 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <meta property="og:title" content="Happy Birthday Sania!">  
+  <meta property="og:description" content="Click here to see your birthday gift.">  
+  <meta property="og:image" content="https://i.imgur.com/OwaRzGs.jpg">  
+  <meta property="og:url" content="https://user160506.github.io/birthday.page.html">  
+  <meta property="og:type" content="website">  
+  <title>Happy Birthday!</title>  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+  <style>  
+    body {  
+      background: linear-gradient(to right, #FF0000 0%, #71D1D3 110%);  
+      font-family: 'Comic Sans MS', cursive, sans-serif;  
+      overflow-x: hidden;  
+    }
+
+    .noscroll {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .balloon {  
+      position: absolute;  
+      bottom: -10px;  
+      width: 40px;  
+      height: 60px;  
+      background-color: #1503A5;  
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;  
+      animation: floatUp 5s infinite ease-in;  
+    }  
+
+    .balloon::after {  
+      content: '';  
+      position: absolute;  
+      bottom: -20px;  
+      left: 50%;  
+      transform: translateX(-50%);  
+      width: 2px;  
+      height: 20px;  
+      background: #333;  
+    }  
+
+    @keyframes floatUp {  
+      0% { transform: translateY(0) translateX(0); opacity: 1; }  
+      100% { transform: translateY(-120vh) translateX(20px); opacity:0; }  
+    }  
+
+    h1 {  
+      font-size: 50px;  
+      margin-bottom: 20px;  
+      text-shadow: 2px 2px#000;  
+    }  
+
+    .button {  
+      background-color: red;  
+      color: white;  
+      padding: 15px 30px;  
+      border: none;  
+      border-radius: 50px;  
+      font-size: 18px;  
+      cursor: pointer;  
+    }  
+
+    .button:hover {  
+      background-color: darkred;  
+    }  
+
+    video {  
+      margin-top: 50px;  
+      width: 100%;  
+      display:none;  
+      border-radius:30px;  
+      box-shadow: 0 0 20px#000;  
+    }  
+
+    .heart-button {
+      background-color:#1549E1;
+      color: white;
+      font-size: 20px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      animation: bounce 1s infinite;
+      position: relative;
+      top: 100px;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    #coverPage {
+      background: url("https://i.imgur.com/8xapFmr.jpeg") no-repeat center center;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 1.5s ease, opacity 1.5s ease;
+    }
+
+    #coverPage.opened {
+      transform: rotateY(180deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>  
+<body class="text-center text-white noscroll">  
+
+  <div id="coverPage">
+    <img src="https://i.postimg.cc/ZYrhzMY4/Screenshot-20250508-222108-Facebook.jpg" alt="Sania" class="w-22 h-22 rounded-full shadow-lg mb-6 border-2 border-white">
+    <button onclick="openPage()" class="text-white bg-red-600 hover:bg-red-800 px-8 py-4 text-xl rounded-full transition duration-300 shadow-lg">Open</button>
+  </div>
+
+  <div class="w-full flex justify-center absolute top-0 z-10">  
+    <img src="https://i.postimg.cc/2SGM5X9z/carnival-garland-flags-decorative-colorful-600nw-1059004949-removebg-preview.png" alt="Top Decorations" class="w-full max-w-3x1">  
+  </div>    
+
+  <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>  
+  <div class="balloon" style="left: 40%; animation-delay: 2s; background-color: #6c5ce7;"></div>  
+  <div class="balloon" style="left: 60%; animation-delay: 4s; background-color: #00b894;"></div>  
+  <div class="balloon" style="left: 80%; animation-delay: 1s; background-color: #ffeaa7;"></div>  
+
+  <section class="min-h-screen flex flex-col justify-start items-center px-4 pt-40" data-aos="fade-down">
+    <h1 class="text-4xl md:text-6xl font-bold mt-6 animate-bounce">Happy Birthday Sania!</h1>
+    <div class="w-full flex justify-center pt-4">
+      <img src="https://i.postimg.cc/fy8wTjcd/delicious-luxurious-happy-birthday-cake-beautiful-candles-297465283-removebg-preview.png" alt="Cake" class="w-48 h-30 mx-48" style="background: transparent; box-shadow: none;">
+    </div>
+    <p class="text-lg md:text-2xl mb-6">Wish you all the happiness and love in the world!!!⬇️Scroll Down</p>
+  </section>
+
+  <section class="min-h-screen flex flex-col justify-center items-center px-4" data-aos="fade-down">    
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-bounce"></h1>  
+    <p class="text-lg md:text-2xl mb-6">⬇️Scroll Down</p> 
+  </section>   
+
+  <section class="py-6 px-6 space-y-10">  
+    <div data-aos="fade-up" class="bg-pink-200 text-pink-800 p-6 rounded-lg shadow-md">  
+      <h3 class="text-2xl font-bold mb-2">May your day be filled with sunshine and smile.</h3>  
+    </div>  
+    <div data-aos="fade-left" class="bg-yellow-100 text-yellow-900 p-6 rounded-lg shadow-md">  
+      <h3 class="text-2xl font-bold mb-2">Enjoy every second, every minute, every hour!</h3>  
+    </div>  
+    <div data-aos="fade-right" class="bg-purple-200 text-purple-900 p-6 rounded-lg shadow-md">  
+      <h3 class="text-2xl font-bold mb-2">May This New Chapter Bring You Closer To Everything Your Heart Quietly Dreams.  ⬇️Scroll Down</h3>   
+    </div>
+  </section>      
+
+  <footer class="py-10" data-aos="zoom-in">  
+    <p class="text-lg"></p>  
+    <div class="text-3xl mt-4 animate-pulse"></div>  
+  </footer>   
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script>
+    AOS.init();
+  </script>  
+
+  <button class="heart-button" onclick="showVideo()">Click Here for a Surprise</button>
+
+  <div class="video-container" id="videoContainer">
+    <video id="surpriseVideo" controls>  
+      <source src="https://i.imgur.com/cpjCNYS.mp4" type="video/mp4">  
+    </video>  
+  </div>  
+
+  <script>  
+    let playCount = 0;  
+    function showVideo() {  
+      const video = document.getElementById('surpriseVideo');  
+      video.style.display = "block";  
+      video.play();  
+      video.addEventListener("ended", () => {  
+        playCount++;  
+        if (playCount < 2) {  
+          video.play();  
+        } else {  
+          video.pause();  
+        }  
+      });
+    }
+
+    function openPage() {
+      const cover = document.getElementById('coverPage');
+      cover.classList.add('opened');
+      document.body.classList.remove('noscroll'); // Enable scrolling again
+
+      setTimeout(() => {
+        startConfetti();
+      }, 1500);
+    }
+  </script>
+
+  <div style="height: 150px;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>  
+  <audio id="popSound" src="https://media.vocaroo.com/mp3/16GIVV6hSFKm" preload="auto"></audio>  
+
+  <script>  
+    function startConfetti() {  
+      const pop = document.getElementById('popSound');  
+      pop.play();  
+
+      const duration = 5000;  
+      const end = Date.now() + duration;  
+
+      (function frame() {  
+        confetti({  
+          particleCount: 4,  
+          angle: 60,  
+          spread: 100,  
+          origin: { x: 0 }  
+        });  
+        confetti({  
+          particleCount: 5,  
+          angle: 120,  
+          spread: 100,  
+          origin: { x: 1 }  
+        });  
+
+        if (Date.now() < end) {  
+          requestAnimationFrame(frame);  
+        }  
+      })();  
+    }  
+  </script>  
+</body>  
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    ⬇️Scroll  Down 
+    
+  <title>Birthday Game</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #ffeaf0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      font-size: 18px;
+    }
+    #playSection {
+      margin: 40px 0;
+    }
+    #playButton, #startGameButton, #restartButton {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #1549E1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #birthdayGameWrapper {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    #gameArea {
+      position: relative;
+      width: 90vw;
+      max-width: 395px;
+      height: 395px;
+      background-color: #F0F0F0;
+      border: 3px solid #000;
+      overflow: hidden;
+      touch-action: none;
+      margin-bottom: 10px;
+    }
+    #startGameButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1549E1;
+      z-index: 10;
+      animation: pulse 1.2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+      50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.85; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+    #bar {
+      position: absolute;
+      width: 100px;
+      height: 20px;
+      background-color: #1549E1;
+      bottom: 10px;
+      left: 150px;
+    }
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      font-size: 28px;
+      color: darkred;
+    }
+    #countdown {
+      font-size: 20px;
+      margin: 10px;
+    }
+    #catchCount {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+      color: #000;
+      background: #fff0f5;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid #000;
+    }
+    #message {
+      font-size: 20px;
+      margin: 10px;
+      color: #000;
+    }
+    #restartButton {
+      display: none;
+      position: absolute;
+      top: 93%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1549e1;
+      z-index: 10;
+    }
+    #winOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 5;
+    }
+    #winOverlay img {
+      width: 100%;
+      height: auto;
+    }
+    .nameOverlay {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 36px;
+      color: #FFFFFF;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      animation: glow 2s ease-in-out infinite alternate;
+      white-space: nowrap;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 20px #ff6ec7;
+        opacity: 0.8;
+      }
+      to {
+        text-shadow: 0 0 10px #ffccff, 0 0 20px #ff6ec7, 0 0 30px #ff99cc;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<div style="height: -50px;"></div>
+
+<div class="gift-container">
+
+  <div class="video-popup" id="videoPopup">
+    <iframe id="videoFrame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <span class="close-btn" id="closeBtn">&times;</span>
+  </div>
+
+  <div class="gift-section" id="giftTrigger">
+    <img src="https://i.postimg.cc/4Nzk263h/Screenshot-20250507-104012-Chrome-removebg-preview.png" alt="Gift Box" class="gift-img" />
+    <p class="gift-message">CLICK ON THE GIFT</p>
+  </div>
+</div>
+
+<style>
+  .gift-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 300px;
+    margin-top: 100px;
+  }
+
+  .gift-section {
+    text-align: center;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+  }
+
+  .gift-img {
+    width: 170px;
+    height: auto;
+  }
+
+  .gift-message {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  .video-popup {
+    display: none;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .video-popup iframe {
+    width: 500px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: none;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 18px;
+    color: red;
+    background: #000000;
+    border-radius: 50%;
+    padding: 0 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  const giftTrigger = document.getElementById("giftTrigger");
+  const videoPopup = document.getElementById("videoPopup");
+  const videoFrame = document.getElementById("videoFrame");
+  const closeBtn = document.getElementById("closeBtn");
+
+  const streamableLink = "https://streamable.com/e/4v6w8i?nocontrols=1";
+  let videoPlayed = false;
+
+  function pauseAllMediaExcept(target) {
+    const allMedia = document.querySelectorAll('audio, video, iframe');
+    allMedia.forEach(el => {
+      if (el !== target) {
+        if (el.tagName === 'AUDIO' || el.tagName === 'VIDEO') {
+          el.pause?.();
+        } else if (el.tagName === 'IFRAME') {
+          el.src = el.src;
+        }
+      }
+    });
+  }
+
+  giftTrigger.addEventListener("click", () => {
+    if (videoPlayed) return;
+
+    pauseAllMediaExcept(videoFrame);
+    videoFrame.src = streamableLink;
+    videoPopup.style.display = "block";
+    videoPlayed = true;
+
+    setTimeout(() => {
+      videoPopup.style.display = "none";
+      videoFrame.src = "";
+      videoPlayed = false;
+    }, 15000);
+  });
+
+  closeBtn.addEventListener("click", () => {
+    videoPopup.style.display = "none";
+    videoFrame.src = "";
+    videoPlayed = false;
+  });
+</script>
+
+  <header>
+   ⬇️ Tap below to play a fun heart-catching game. Catch 13 hearts to win and see a surprise!
+  </header>
+
+  <div id="playSection">
+    <button id="playButton">Play Here</button>
+  </div>
+
+  <div id="birthdayGameWrapper">
+    <div id="gameArea">
+      <button id="startGameButton">Start Game</button>
+      <div id="bar"></div>
+      <div id="catchCount">Caught: 0</div>
+      <div id="winOverlay">
+        <img src="https://imgur.com/oTVelgU.jpg" alt="Celebration Image" />
+        <div class="nameOverlay">Sania Aayat</div>
+      </div>
+      <button id="restartButton">Restart Game</button>
+      <div id="instructionNote">Move The Bar To Play</div>
+    
+    </div>
+    <div id="countdown">Time Left: 20s</div>
+    <div id="message"></div>
+  </div>
+
+<style>
+  #instructionNote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+    color: #858080;
+  }
+
+  #instructionNote.fade-out {
+    opacity: 0;
+  }
+</style>
+
+  <script>
+    const playButton = document.getElementById("playButton");
+    const birthdayGameWrapper = document.getElementById("birthdayGameWrapper");
+    const gameArea = document.getElementById("gameArea");
+    const startGameButton = document.getElementById("startGameButton");
+    const bar = document.getElementById("bar");
+    const countdown = document.getElementById("countdown");
+    const message = document.getElementById("message");
+    const catchCount = document.getElementById("catchCount");
+    const restartButton = document.getElementById("restartButton");
+    const winOverlay = document.getElementById("winOverlay");
+    const backgroundVideo = document.getElementById("backgroundVideo");
+    const instructionNote = document.getElementById("instructionNote");
+
+    const catchSound = new Audio("https://media1.vocaroo.com/mp3/1f14jioLA0M3");
+    const customWinSong = new Audio("https://media.vocaroo.com/mp3/154hlYEuzs8U");
+    customWinSong.loop = true;
+
+    let audioAllowed = false;
+    let hearts = [];
+    let caught = 0;
+    let heartInterval, moveInterval, countdownInterval;
+    let timeLeft = 20;
+    let dragging = false, startX = 0, barStartLeft = 0;
+    let instructionShown = true;
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * (gameArea.clientWidth - 30) + "px";
+      heart.style.top = "0px";
+      gameArea.appendChild(heart);
+      hearts.push(heart);
+    }
+
+    function moveHearts() {
+      hearts.forEach((heart, i) => {
+        const top = parseInt(heart.style.top);
+        heart.style.top = top + 10 + "px";
+
+        const barRect = bar.getBoundingClientRect();
+        const heartRect = heart.getBoundingClientRect();
+        const areaRect = gameArea.getBoundingClientRect();
+
+        if (
+          heartRect.bottom >= barRect.top &&
+          heartRect.left < barRect.right &&
+          heartRect.right > barRect.left &&
+          heartRect.bottom <= areaRect.bottom
+        ) {
+          heart.remove();
+          hearts.splice(i, 1);
+          caught++;
+          catchSound.play();
+          catchCount.innerText = `Caught: ${caught}`;
+          if (caught === 13) {
+            message.innerText = "YOUR KING😅,,,BYE!!!😊";
+            stopGame(true);
+          }
+        } else if (top > gameArea.clientHeight) {
+          heart.remove();
+          hearts.splice(i, 1);
+        }
+      });
+    }
+
+    function updateCountdown() {
+      timeLeft--;
+      countdown.innerText = `Time Left: ${timeLeft}s`;
+      if (timeLeft <= 0) {
+        stopGame(false);
+        if (caught < 13) message.innerText = "Time's up! Try again!";
+      }
+    }
+
+    function showGameArea() {
+      playButton.style.display = "none";
+      birthdayGameWrapper.style.display = "flex";
+      birthdayGameWrapper.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function startGame() {
+      if (!audioAllowed) {
+        customWinSong.load();
+        audioAllowed = true;
+      }
+
+      startGameButton.style.display = "none";
+      restartButton.style.display = "none";
+      winOverlay.style.display = "none";
+      timeLeft = 18;
+      caught = 0;
+      message.innerText = "";
+      countdown.innerText = "Time Left 18s";
+      catchCount.innerText = "Caught: 0";
+      hearts.forEach(h => h.remove());
+      hearts = [];
+
+      customWinSong.pause();
+      customWinSong.currentTime = 0;
+
+      heartInterval = setInterval(createHeart, 800);
+      moveInterval = setInterval(moveHearts, 30);
+      countdownInterval = setInterval(updateCountdown, 1000);
+
+      instructionNote.style.display = "block"; 
+      instructionShown = true;
+    }
+
+    function stopGame(won) {
+      clearInterval(heartInterval);
+      clearInterval(moveInterval);
+      clearInterval(countdownInterval);
+
+      if (won) {
+        const video = document.getElementById("backgroundVideo");
+        if (video) {
+          video.pause();
+          video.muted = true;
+          video.style.display = "none";
+        }
+
+        winOverlay.style.display = "flex";
+        customWinSong.currentTime = 0;
+        customWinSong.play();
+      }
+
+      restartButton.style.display = "inline-block";
+    }
+
+    bar.addEventListener("touchstart", (e) => {
+      dragging = true;
+      startX = e.touches[0].clientX;
+      barStartLeft = bar.offsetLeft;
+    });
+
+    bar.addEventListener("touchmove", (e) => {
+      if (!dragging) return;
+
+      if (instructionShown) {
+        instructionNote.style.display = "none";
+        instructionShown = false;
+      }
+
+      const deltaX = e.touches[0].clientX - startX;
+      let newLeft = barStartLeft + deltaX;
+      newLeft = Math.max(0, Math.min(newLeft, gameArea.clientWidth - bar.offsetWidth));
+      bar.style.left = newLeft + "px";
+    });
+
+    bar.addEventListener("touchend", () => {
+      dragging = false;
+    });
+
+    playButton.addEventListener("click", showGameArea);
+    startGameButton.addEventListener("click", startGame);
+    restartButton.addEventListener("click", startGame);
+  </script>
+</body>
+
+
+     ❤️😊😊😊😊😊❤️
