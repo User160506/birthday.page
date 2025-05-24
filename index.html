@@ -3,63 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <title>Birthday Lock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      background: #0d0d0d;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding: 0;
+      background: url("https://i.postimg.cc/dtdw0d9F/bbc28e3a70e0027cb8ff4dc2aaab1b01.jpg") no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Segoe UI', sans-serif;
-    }
-    .container {
-      text-align: center;
-    }
-    .lock-icon {
-      font-size: 80px;
-      margin-bottom: 20px;
-    }
-    input {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      border: none;
-      background-color: #ff4081;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
     }
-    #error {
-      color: red;
-      margin-top: 10px;
+
+    .lock-screen {
+      background-color: rgba(106, 187, 218, 1);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 320px;
+      box-sizing: border-box;
+      animation: floatBounce 3s infinite ease-in-out;
+      transition: all 0.8s ease-in-out;
+    }
+
+    .lock-screen.unlocking {
+      animation: unlockZoomOut 0.9s forwards ease-in-out;
+    }
+
+    @keyframes floatBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .lock-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+      animation: bounce 1.5s infinite ease-in-out;
+      transition: transform 0.5s ease, color 0.5s ease;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes iconSpinPop {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(1.4);
+      }
+      100% {
+        transform: rotate(360deg) scale(0);
+      }
+    }
+
+    @keyframes unlockZoomOut {
+      0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(5deg);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-20deg);
+      }
+    }
+
+    .lock-icon.unlocked {
+      animation: iconSpinPop 0.9s forwards ease-in-out;
+      color: #00ff99;
+    }
+
+    .display {
+      font-size: 26px;
+      background-color: #111;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      letter-spacing: 12px;
+      min-height: 32px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .keypad button {
+      padding: 18px;
+      font-size: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .keypad button:active {
+      background-color: #666;
+    }
+
+    @media (max-width: 500px) {
+      .lock-icon {
+        font-size: 40px;
+      }
+      .display {
+        font-size: 22px;
+        letter-spacing: 10px;
+      }
+      .keypad button {
+        padding: 15px;
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="lock-icon">🔒</div>
-    <h2>Enter Password to Unlock</h2>
-    <input type="password" id="password" placeholder="Password">
-    <br>
-    <button onclick="unlock()">Unlock</button>
-    <div id="error"></div>
+  <div class="lock-screen" id="lockScreen">
+    <div class="lock-icon" id="lockIcon">🔒</div>
+    <div class="display" id="pinDisplay"></div>
+    <div class="keypad">
+      <button onclick="appendDigit('1')">1</button>
+      <button onclick="appendDigit('2')">2</button>
+      <button onclick="appendDigit('3')">3</button>
+      <button onclick="appendDigit('4')">4</button>
+      <button onclick="appendDigit('5')">5</button>
+      <button onclick="appendDigit('6')">6</button>
+      <button onclick="appendDigit('7')">7</button>
+      <button onclick="appendDigit('8')">8</button>
+      <button onclick="appendDigit('9')">9</button>
+      <button onclick="clearPin()">C</button>
+      <button onclick="appendDigit('0')">0</button>
+      <button onclick="checkPin()">OK</button>
+    </div>
   </div>
 
   <script>
-    function unlock() {
-      const pass = document.getElementById("password").value;
-      if (pass === "birthday") {
-        window.location.href = "birthday.html"; // Your main site page
+    let enteredPin = "";
+    const correctPin = "310807"; 
+    const display = document.getElementById("pinDisplay");
+    const lockIcon = document.getElementById("lockIcon");
+    const lockScreen = document.getElementById("lockScreen");
+    let pinVisual = ["", "", "", "" ,"", ""];
+    let revealTimeouts = [];
+
+    function appendDigit(digit) {
+      if (enteredPin.length < 6) {
+        enteredPin += digit;
+        const index = enteredPin.length - 1;
+        pinVisual[index] = digit;
+        updateDisplay();
+
+        clearTimeout(revealTimeouts[index]);
+        revealTimeouts[index] = setTimeout(() => {
+          pinVisual[index] = "•";
+          updateDisplay();
+        }, 1000);
+      }
+    }
+
+    function updateDisplay() {
+      display.innerText = pinVisual.filter(v => v !== "").join("");
+    }
+
+    function clearPin() {
+      enteredPin = "";
+      pinVisual = ["", "", "", "" , "", ""];
+      revealTimeouts.forEach(timeout => clearTimeout(timeout));
+      updateDisplay();
+    }
+
+    function checkPin() {
+      if (enteredPin === correctPin) {
+        lockIcon.classList.add("unlocked");
+        lockScreen.classList.add("unlocking");
+        setTimeout(() => {
+          window.location.href = "birthday.html";
+        }, 1000);
       } else {
-        document.getElementById("error").innerText = "Incorrect password. Try again!";
+        display.innerText = "Try Again";
+        setTimeout(() => {
+          clearPin();
+        }, 1200);
       }
     }
   </script>
