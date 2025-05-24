@@ -145,8 +145,7 @@
       }
     }
   </style>
-</head>
-<body class="text-center text-white noscroll">  
+</head>  
 <body>
   <div class="lock-screen" id="lockScreen">
     <div class="lock-icon" id="lockIcon">🔒</div>
@@ -166,6 +165,11 @@
       <button onclick="checkPin()">OK</button>
     </div>
   </div>
+
+<script> document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.overflow = 'hidden';
+  });
+</script>
 
   <script>
     let enteredPin = "";
